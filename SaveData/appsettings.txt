@@ -1,0 +1,1 @@
+{"privaterooms":"","pridorm":1,"buildsdir":"C:\\RebornRecFiles","discordpres":true,"astolfo":false,"region":"us"}
