@@ -3,10 +3,11 @@ USER root
 WORKDIR /app
 COPY . /app
 
-# Force container to bypass missing network parameters
+# Force the emulator to run headlessly without a monitor screen
+ENV DISPLAY=:0
 ENV WINEDEBUG=-all
 
 EXPOSE 2056 2057 2059
 
-# Command to bypass the menu selection and boot directly into hosting
-CMD ["wine", "RebornRec.exe", "5"]
+# This script passes '5' to the menu automatically to force start the server backend
+CMD ["sh", "-c", "echo '5' | wine RebornRec.exe"]
